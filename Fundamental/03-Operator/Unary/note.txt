@@ -1,0 +1,6 @@
+operator unary hanya membutuhkan 1 operand
+operator(operand1)
+
+cth : 
+typeof(operand1)
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary | Perbandingan / comparison</title>
+    <style>
+        ul {
+            background-color: aliceblue;
+            width: 250px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+        li {
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Perbandingan</h1>
+    <h2>ada banyak operatornya</h2>
+    <h3>yaitu :</h3>
+    <ul>
+        <li id="sama-dengan">( == )</li><label for="sama-dengan">sama dengan</label>
+        <li id="tidak-sama-dengan">( != )</li><label for="tidak-sama-dengan">tidak sama dengan</label>
+        <li id="strict-sama-dengan">( === )</li><label for="strict-sama-dengan">strict sama dengan</label>
+        <li id="strict-tidak-sama-dengan">( !== )</li><label for="tidak-sama-dengan">strict tidak sama dengan</label>
+        <li id="lebih-besar-dari">( > )</li><label for="lebih-besar-dari">lebih besar dari</label>
+        <li id="lebih-kecil-dari">( < )</li><label for="lebih-kecil-dari">lebih kecil dari</label>
+        <li id="lebih-besar-sama-dengan">( >= )</li><label for="lebih-besar-sama-dengan">lebih besar sama dengan</label>
+        <li id="lebih-kecil-sama-dengan">( <= )</li><label for="lebih-kecil-sama-dengan">lebih kecil sama dengan</label>
+    </ul>
+    <p>operator perbandingan ini akan menghasilkan nilai boolean</p>
+    <p>cek console.log</p>
+
+    <script>
+        let a = 10;
+        let b = 2;
+
+        console.log('1. ' + (a < b) );
+        console.log('2. ' + (a > b) );
+        console.log('3. ' + (a == b) );
+        console.log('4. ' + (a != b) );
+        console.log('5. ' + (a === b) );
+        console.log('6. ' + (a !== b) );
+        console.log('7. ' + (a >= b) );
+        console.log('8. ' + (a <= b) );
+    </script>
+</body>
+</html>

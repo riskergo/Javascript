@@ -1,0 +1,3 @@
+operator binary, membutuhkan 2 operand
+
+operand1 (operator) operand2

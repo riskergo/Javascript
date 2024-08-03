@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary | Logika</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        span {
+            background-color: wheat;
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+            gap: 10px;
+            font-size: 18pt;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Logika</h1>
+    <h2>Operatornya : </h2>
+    <ul>
+        <span><li id="and">( && )</li><label for="and">AND</label><p>kedua kondisi harus true agar menghasilkan true</p> </span>
+        <span><li id="or">( || )</li><label for="or">OR</label> <p>cukup salah satu kondisi yang true agar menghasilkan true</p> </span>
+        <span><li id="not">( ! )</li><label for="not">NOT</label> <p>pembalikan nilai boolean (true/false) dari dari nilai aslinya </p> </span>
+    </ul>
+    <p>Operator-operator ini akan menghasilkan nilai boolean</p>
+    <p>cek console.log</p>
+
+
+    <script>
+        let a = 10;
+        let b = 11;
+
+        console.log(a % 2 == 0);   // true
+        console.log('===============');
+        console.log('operator and')
+        console.log( (a % 2 == 0) && (a < 20) ); // true
+        console.log( (a % 2 == 0) && (a < 10) ); // false
+        console.log( (b % 2 == 0) && (a < 20) ) // false
+        console.log( (b % 2 == 0) && (a < 10) ) // false
+
+
+        console.log('===============');
+        console.log('operator or')
+        console.log( (a % 2 == 0) || (a < 20) ); // true
+        console.log( (a % 2 == 0) || (a < 10) ); // true
+        console.log( (b % 2 == 0) || (a < 20) ) // true
+        console.log( (b % 2 == 0) || (a < 10) ) // false
+
+
+        console.log('===============');
+        console.log('operator not')
+        console.log( !(a % 2 === 0) ) // false
+        console.log( !(b % 2 === 0) ) // true
+
+    </script>
+</body>
+</html>

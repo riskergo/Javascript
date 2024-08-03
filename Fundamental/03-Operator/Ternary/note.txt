@@ -1,0 +1,5 @@
+ternary membutuhkan 3 operand
+
+contoh : 
+
+(operand1) ? (operand2) : (operand3);

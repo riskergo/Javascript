@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <h1>String</h1>
+    <h2>Disimpan menggunakan kutip 1 atau kutip 2</h2>
+    <h3>"Halo" atau 'Halo'</h3>
+
+
+    <p>cek console</p>
+
+    <script>
+        console.log("Halo");
+        console.log('Hai Semua');
+        console.log(`mengapa anda begitu di hari jum'at`)
+        console.log("Tidak apa apa \nmending turu")
+        
+
+        let nama = "Raja Irony"
+        // spasi juga dihitung apabila di dalam string
+        console.log(nama.length); // 10
+
+        console.log("\u00a9")
+        console.log("\u00ae")
+        console.log("\u2122")
+
+        // concatenation
+        // concat
+        console.log("Koree" + " " + "Raja" + " " + "Irony")
+
+
+        // perbandingan
+        console.log("Koree Antonio" === "Koree Antonio") // true
+        console.log("Koree Antonio" === "koree Antonio") // false
+        console.log("Koree Antonio" == "Koree Antonio") // true
+        console.log("Koree Antonio" == "koree Antonio") // false
+
+        // bagian testing
+        let angka = 123124;
+        console.log(angka.length);  // undefined karena bukan angka
+        let kore = angka.toString() // 6
+        console.log(kore.length);  // 6
+
+        
+        let angkaAsli = 23;
+        let angkaBinerKonversi = angkaAsli.toString(2);
+        console.log(angkaBinerKonversi);
+        let konversiToINT = parseInt(angkaBinerKonversi);
+        console.log(konversiToINT);
+    </script>
+</body>
+</html>

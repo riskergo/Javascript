@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean</title>
+</head>
+<body>
+    <h1>Boolean</h1>
+    <h2>True | False</h2>
+
+
+    <h3>truthy or falsy</h3>
+    <ul>
+        <li>Truthy
+            <ol type="a">
+                <li>true</li>
+                <li>non-zero number</li>
+                <li>"string"</li>
+                <li>object</li>
+                <li>arrays</li>
+                <li>function</li>
+            </ol>
+        </li>
+        <li>falsy
+            <ol type="a">
+                <li>false</li>
+                <li>0</li>
+                <li>"" / string kosong</li>
+                <li>undefined</li>
+                <li>null</li>
+                <li>NaN</li>
+            </ol>
+        </li>
+    </ul>
+
+
+    <script>
+
+        console.log("Truthy======")
+        let a = true;
+        console.log(Boolean(a));
+
+        let b = -1
+        console.log(Boolean(b))
+
+        let c = 10
+        console.log(Boolean(c))
+
+        let d = 3.5
+        console.log(Boolean(d))
+
+        let e = {
+            nama : 'koree'
+        }        
+        console.log(Boolean(e));
+
+        let f = ["kaor", 1, false];
+        console.log(Boolean(f));
+
+        let g = function tambah (number) {
+            number + number
+        };
+        console.log(Boolean(g));
+
+        console.log("Falsy======")
+        let h = false;
+        console.log(Boolean(h));
+
+        let i = 0;
+        console.log(Boolean(i))
+
+        let j = '';
+        console.log(Boolean(j))
+
+        let k = undefined;
+        console.log(Boolean(k));
+
+        let l = null;
+        console.log(Boolean(l))
+
+        let m = NaN;
+        console.log(Boolean(m));
+
+
+        // dengan operator perbandingan
+        console.log("Operator Perbandingan");
+        console.log("Koree" == "koree");
+        console.log(10 < 20);
+    </script>
+</body>
+</html>

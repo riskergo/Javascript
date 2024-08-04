@@ -10,4 +10,4 @@ for(noAngkot; noAngkot <= jmlAngkot; noAngkot++){
     }
 }
 
-console.log("Bye");
+console.log("Bye bro");

@@ -1,1 +1,1 @@
-A directory that contains javascript learning
+A repository that contains javascript learning

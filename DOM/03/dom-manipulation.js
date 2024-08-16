@@ -117,8 +117,8 @@ console.log(p2.classList)
                 //* captured-element.classList.add("class-name")
                 //* captured-element.classList.remove("class-name")
                 //* captured-element.classList.toggle("class-name")
-                //* captured-element.classList.item(index(number));
+                z//* captured-element.classList.item(index(number));
                 //* captured-element.classList.contains("class-name")
                 //* captured-element.classList.replace("class name within the tag", "new class name");
-    
+        //* conclusion ~end
     */

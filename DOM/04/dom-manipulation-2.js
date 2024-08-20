@@ -4,7 +4,9 @@
     //* document.createElement("Nama Element html");
     //* document.createTextNode("insert text");
     //* namaNode.appendChild(namaNode);     note: appendChild simpan ke akhir dari sebuah element parent (letaknya di akhir sebuah element)
-
+    //* namaNode.insertBefore(newNode/element, afterIndexNode/element);
+    //* parent-node.removeChild(capturedNode/element);
+    //* parent-node.replaceChild(newNode/element, theNodeThatWantToReplace)
 */
 // * coba 1
     //* buat variabel untuk element yang diinginkan

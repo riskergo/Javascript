@@ -33,27 +33,42 @@ capturedSectionSatu.insertBefore(pBaru, pIndex1);
 
 pBaru.classList.add("p0");
 
-const getContainer = document.getElementsByClassName("container")[0];
-
 const newButton = document.createElement("button");
 const newTextForButton = document.createTextNode("Send!");
 newButton.appendChild(newTextForButton);
-newButton.style.width = "50%"
-newButton.style.margin = "20px auto";
 
-newButton.setAttribute("nama", "tombol")
 newButton.setAttribute("type", "submit")
-
-getContainer.appendChild(newButton);
+newButton.style.width = "50%"
+newButton.style.margin = "20px 25%"
 
 const capturedSectionDua = document.getElementById("dua");
 
 const newForm = document.createElement("form");
 const newLabel = document.createElement("label");
 const newInputType = document.createElement("input");
+const textForLabel = document.createTextNode("E-mail :")
 
-newLabel.setAttribute("for", "review")
+newLabel.appendChild(textForLabel);
+newInputType.style.fontSize = "13pt";
+
+
+const typeInputType = document.createAttribute("type");
+typeInputType.value = "email";
+newInputType.setAttributeNode(typeInputType);
+
+const idForInput = document.createAttribute("id");
+idForInput.value = "review"
+newInputType.setAttributeNode(idForInput);
+newLabel.setAttribute("id", "review")
+
+
+const nameForInput = document.createAttribute("name");
+nameForInput.value = "email";
+newInputType.setAttributeNode(nameForInput);
+
 
 newForm.appendChild(newLabel);
 newForm.appendChild(newInputType);
 
+capturedSectionDua.appendChild(newForm)
+newForm.appendChild(newButton);

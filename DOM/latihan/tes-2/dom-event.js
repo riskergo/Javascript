@@ -56,3 +56,44 @@ const capturedP3 = capturedSectionA.getElementsByClassName("p3")[0];
     })
 
     capturedSectionA.replaceChild(input, capturedP3);
+
+//* capture span
+const capturedJudulSpan = document.getElementsByClassName("span-judul")[0];
+capturedJudulSpan.style.display = "flex";
+capturedJudulSpan.style.justifyContent = "space-between";
+//* capture button
+const capturedButton = capturedJudulSpan.getElementsByTagName("button")[0];
+//* ganti judul
+const capturedH1 = capturedJudulSpan.querySelector("#judul");
+capturedH1.style.display = "inline-block"
+
+capturedButton.addEventListener("mouseenter", function() {
+    capturedButton.style.backgroundColor = "darkgrey";
+    capturedButton.style.color = "white";
+    // capturedButton.style.textShadow = "2px 2px 0 black"
+})
+capturedButton.addEventListener("mouseleave", function() {
+    capturedButton.style.backgroundColor = "white";
+    capturedButton.style.color = "black";
+})
+
+
+
+capturedButton.addEventListener("click", function() {
+
+    function randomNumber(){
+        return Math.floor(Math.random()*3) + 1 ;
+    }
+
+    let angka = randomNumber();
+  
+    if(angka < 2){
+        capturedH1.innerHTML = "Welcome Choosen Undead";
+    }else if (angka > 2) {
+        capturedH1.innerHTML = "Welcome Bearer Of The Curse";
+    }else {
+        capturedH1.innerHTML = "Welcome Ashen One";
+    }
+})
+
+

@@ -60,7 +60,8 @@ capturedList1.onclick = function(){
     capturedList1.style.color = "white";
 }
     //* maka, yang terjadi di sini adalah, event Handler itu menimpa perubahan yang sebelumnya dilakukan
-    //* yaitu, awalnya ingin mengubah background item 1 menjadi
+    //* yaitu, awalnya ingin mengubah background item 1 menjadi warna tomato tapi dengan adanya-
+    //* event handler yang baru di bawahnya, maka ditimpa lah
 
     //* tangkap item 2
 const capturedList2 = document.querySelector("section#b li:nth-child(2)");

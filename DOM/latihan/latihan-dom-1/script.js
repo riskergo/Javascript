@@ -39,12 +39,12 @@ newButton.appendChild(textForNewButton);     //* append ke button
 // const capturedScript = document.getElementsByTagName("script")[0];
 // document.body.insertBefore(newButton, capturedScript);
 //* pakai cara yg baru ini, after/before
+//* elementSebelumnya.after(elementYangInginDitambahkan);
 capturedButton.after(newButton);
 
         //* buat logika untuk warna acak-nya
     //* menggunakan event handler
-newButton.onclick = function(){
-    
+newButton.onclick = function(){    
     //* di sini kita menggunakan rgb karena rgb itu inputannya angka dari 0 - 255
     //* buat dulu angka random antara 0 - 255
     const red = Math.round(Math.random() * 255);    //* range daari 0 - 255, kalau ingin dari 1 - 255, maka tambahkan 1 setelah 255
@@ -53,5 +53,20 @@ newButton.onclick = function(){
             //* note: Math.round membulatkan ke angka terdekat
             //* Math.floor membulatkan ke angka kebawah
             //* Math.ceil membulatkan ke angka  keatas
-    document.body.style.backgroundColor = "rgb("+ red +", "+ green +", "+ blue +")";
+        // document.body.style.backgroundColor = "rgb("+ red +", "+ green +", "+ blue +")";
+        //* atau  bisa dengan versi ini
+        //* gunakan backtick dan dolar disertai kurung kurawal
+        document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 }
+newButton.ondblclick = function(){
+    document.body.removeAttribute("style");
+}
+
+const resetButton = document.createElement("button");
+resetButton.textContent = "RESET BG COLOR";
+resetButton.onclick = function() {
+    document.body.removeAttribute("style");
+    document.body.removeAttribute("class");
+}
+newButton.after(resetButton);
+

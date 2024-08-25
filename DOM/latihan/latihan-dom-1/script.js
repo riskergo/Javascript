@@ -70,3 +70,63 @@ resetButton.onclick = function() {
 }
 newButton.after(resetButton);
 
+/* 
+            //* slider untuk mengubah warna
+    //* slider merah
+//* coba mengubah warna menggunakan slider
+const capturedSMerah = document.querySelector("input[name=SMerah]");  //* karena element html-nya tidak mempunyai class ataupun id
+                                                                      //*maka select by attribute dan value, mirip seperti css tapi tanpa petik satu/dua pada value-nya
+    //* slider hijau
+const capturedSHijau = document.querySelector("input[name=SHijau]");
+    //* slider biru
+const capturedSBiru = document.querySelector("input[name=SBiru]");
+
+                                //* ganti event-nya menjadi "input" agar realtime, karena "change" harus dilepas saat ditekan agar warna-nya berubah
+capturedSMerah.addEventListener("input", function(){
+    const red = capturedSMerah.value;  //* .value digunakan untuk menangkap apapun element tag input-nya
+                                       //* yaitu : textfield, slider, combobox, radio-buttom, checkbox apapun itu, bisa diambil dengan .value. silahkan cek di console.log
+    const green = capturedSHijau.value;
+    const blue = capturedSBiru.value;
+    document.body.style.backgroundColor = "rgb("+red+", "+ green +", "+ blue +")";
+
+    //* tanpa variabel, untuk peforma
+    //* document.body.style.backgroundColor = "rgb("+capturedSMerah.value+", 100, 100)";
+});
+capturedSHijau.addEventListener("input", function(){
+    const red = capturedSMerah.value;
+    const green = capturedSHijau.value;
+    const blue = capturedSBiru.value;
+    document.body.style.backgroundColor = "rgb("+red+", "+ green +", "+ blue +")";
+})
+
+capturedSBiru.addEventListener("input", function(){
+    const red = capturedSMerah.value;
+    const green = capturedSHijau.value;
+    const blue = capturedSBiru.value;
+    document.body.style.backgroundColor = "rgb("+red+", "+ green +", "+ blue +")";
+}) */
+
+
+//* cara yang lebih efektif, memakai for loop atau forEach
+
+    //* versi for loop biasa
+/* const range1 = document.querySelectorAll("input[type=range]");
+for(let i = 0; i < range1.length; i++){
+    range1[i].addEventListener("input", function(){
+        const red = range1[0].value;
+        const green = range1[1].value;
+        const blue = range1[2].value;
+
+        document.body.style.backgroundColor = "rgb("+ red +", "+green+", "+ blue +")"
+    })
+} */
+
+    //* versi forEach
+const range = document.querySelectorAll("input[type=range]");
+range.forEach(function(input){
+    input.addEventListener("input", function(){
+        const RGBColor = "rgb(" +range[0].value+ ", " +range[1].value+ ", " +range[2].value+ ")";
+        document.body.style.backgroundColor = RGBColor;
+        console.log(range);
+    })
+})

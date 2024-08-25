@@ -19,11 +19,40 @@
         .biru-muda{
             background-color: lightblue;
         }
+        .kotak {
+            width: 25px;
+            height: 25px;
+            margin: 10px auto;
+        }
+        .merah {
+            background-color: red;
+        }
+        .hijau {
+            background-color: green;
+        }
+        .biru {
+            background-color: blue;
+        }
     </style>
 </head>
 <body>
     <h1>Bermain dengan Warna</h1>
     <button type="button" class="warna">CLICK<br> ME!</button>
+
+    <br><br>
+
+    <!-- untuk slider, tambahkan attribut yg diperlukan -->
+    <!-- untuk mengubah warna dengan menggunakan rgb, maka diperlukan nilai -->
+    <!-- untuk mengatur, gunakan attribut min max pada element html -->
+    <div class="kotak merah"></div>
+    <input type="range" name="SMerah" min="0" max="255">
+
+    <div class="kotak hijau"></div>
+    <input type="range" name="SHijau" min="0" max="255">
+
+    <div class="kotak biru"></div>
+    <input type="range" name="SBiru" min="0" max="255">
+
 
 <script src="script.js"></script>
 </body>

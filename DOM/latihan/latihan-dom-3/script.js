@@ -5,12 +5,25 @@ const hugeImage = container.querySelector(".huge");
 // const thumbs = container.querySelectorAll(".thumb");
 
 //* variabel penampung yang dinamis
-let temporaryContainerClass = undefined;
-console.log("isi temporary class: (awal) " + temporaryContainerClass);
+let temporaryContainerClass = [];
+console.log("isi temporary class (awal) :  " + temporaryContainerClass);
 //* 
+let theResultFromTemporaryClassArray = undefined;
+
+console.log(temporaryContainerClass.length)
 
 container.addEventListener("click", function (event) {
     if (event.target.className == "thumb") {
+
+        //* coba tanpa pengecekan for
+        console.log("isi temporary class setelah addEventListener dijalankan: "+temporaryContainerClass);
+        if (temporaryContainerClass.length == 1){
+            // temporaryContainerClass.pop();       //* isi array
+            // theResultFromTemporaryClassArray.classList.remove("clicked-img");
+            // console.log("isi temporary class sebelumnya dihapus: " + temporaryContainerClass );
+        }
+
+        console.log(theResultFromTemporaryClassArray);
         //* cara yang lebih efektif, hanya meng-assign property src ke target src
         hugeImage.src = event.target.src;
         //* tambahkan class, sesuai yg di css
@@ -37,17 +50,15 @@ container.addEventListener("click", function (event) {
 
         // event.target.classList.add("clicked-img")
 
-        //* coba tanpa pengecekan for
-        console.log("isi temporary class setelah addEventListener dijalankan: "+temporaryContainerClass);
-        if (temporaryContainerClass != undefined){
-            temporaryContainerClass.classList.remove("clicked-img");       //* remove class clicked-img
-        }
+        theResultFromTemporaryClassArray = temporaryContainerClass[0];
 
         event.target.classList.add("clicked-img");      //* tambahkan class clicked-img
-        temporaryContainerClass = event.target;         //* assign temporary class dengan event.target yaitu element
-        console.log("isis temporary class setelah dilakukan assignment: " + temporaryContainerClass.classList);
+        temporaryContainerClass.unshift(event.target);         //* assign temporary class dengan event.target yaitu element
+        console.log("isi temporary class setelah dilakukan assignment: " + temporaryContainerClass);
+        console.log(temporaryContainerClass.length)
     };
 });
+
 
 // * versi loop, menggunakan forEach/for loop
 // * kurang efektif

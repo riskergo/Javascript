@@ -21,7 +21,7 @@ container.addEventListener("click", function (event) {
         
         console.log("1. isi temporary class setelah addEventListener dijalankan (tahap pertama): "+temporaryContainerClass);
         if (temporaryContainerClass != undefined){
-            temporaryContainerClass.classList.remove("clicked-img");       //* remove class clicked-img
+            temporaryContainerClass.classList.remove("clicked-img");       //* remove class clicked-img 
         }
 
         console.log(temporaryContainerClass);   //* bila sudah 2x di-klik, hasilnya .thumb saja karena sudah di remove yang sebelumnya, lalu...

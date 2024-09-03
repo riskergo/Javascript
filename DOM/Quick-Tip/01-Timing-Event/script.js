@@ -17,7 +17,7 @@
 
 /* 
     //* setTimeOut() memiliki 2 parameter, yaitu : 1. function yang ingin dijalankan, 2. waktu (dalam milisecond), contoh:
-    //* setTimeOut(function(), 2000) --> salah, karena fungsinya ditambahkan tanda kurung, jadi langsung dijalankan, seharusnya:
+    //* setTimeOut(function(), 2000) --> salah, apabila fungsi yang diinputkan itu adalah fungsi yang sudah dibuat sebelumnya karena fungsinya ditambahkan tanda kurung, jadi langsung dijalankan, seharusnya:
     //* setTimeOut(function, 2000) --> benar, function-nya tidak ditambahkan tanda kurung, jadi function tersebut akan dijalankan setelah 2 detik(2000ms) selesai
     ? contoh rill:
 */

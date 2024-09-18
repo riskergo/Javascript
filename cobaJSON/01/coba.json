@@ -1,0 +1,28 @@
+[
+    {
+        "nama": "Koree",
+        "nim": "381832",
+        "lulus": false,
+        "hobby": [
+            "Irony",
+            "Perang"
+        ],
+        "pembimbing": {
+            "pembimbing1": "Fuad",
+            "pembimbing2": "Rusdi"
+        }
+    },
+    {
+        "nama": "cinopil",
+        "nim": "49193",
+        "lulus": "false",
+        "hobby": [
+            "facebook",
+            "gang many"
+        ],
+        "pembimbing": {
+            "pembimbing1": "mr.irony",
+            "pembimbing2": "mr.bampuki"
+        }
+    }
+]

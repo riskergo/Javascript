@@ -113,22 +113,18 @@ capturedBox.addEventListener("click", function(){
     //     this.classList.toggle(dua);
     //     setTimeout(() => {
     //         this.classList.toggle(satu);   //* toggle lagi
-    //         //* karena ini adalah function declaration, maka gunakan arrow function agar memungkinkan terjadinya lexical scope
-            
     //         }, 700);
     // }else {
     //     this.classList.toggle(satu)       //* gunakan toggle, jangan add. Karena konsep yang dibawa oleh toggle adalah: jika ada: hapus, jika tidak ada: tambahkan
     //     setTimeout(() => {
     //         this.classList.toggle(dua);   //* toggle lagi
-    //         //* karena ini adalah function declaration, maka gunakan arrow function agar memungkinkan terjadinya lexical scope
-            
     //     }, 700);
     // }
 
-    //* versi mudah :
+    // //* versi mudah :
     if(this.classList.contains(satu)){
         //* biasanya membutuhkan variabel temporary
-        // temp = satu;
+        // let temp = satu;
         // satu = dua;
         // dua = temp;
         //* dengan javascript terbaru, bisa mempersingkatnya dengan menggunakan ini

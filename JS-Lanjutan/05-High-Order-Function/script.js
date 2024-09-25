@@ -46,3 +46,35 @@ function selesai(){
 // console.log(total);
 
 //* ubah ke high order function 
+/* function sum(range){
+    return range;
+}
+
+function range(total, count){
+    while(total < 10){
+        total = count;
+        count += 1;
+    }
+
+    return total
+}
+
+console.log(sum(range(0, 1))); */
+
+//* versi 2
+function sum(range){
+    range();
+}
+
+function range(){
+    let total = 0;
+    let count = 1;
+    while(total < 10){
+
+        total = count;
+        count += 1;
+    }
+    console.log(total);
+}
+
+sum(range); 

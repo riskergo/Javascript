@@ -53,3 +53,13 @@ pTotalDurasi.innerText = `${jam} jam ${menit} menit ${detik} detik`
 
 // console.log(jumlahVideo);
 // console.log(totalDurasi);
+
+/* 
+
+    //* yang baru didapat
+        //* Array.from  --> mengkonversi nodelist atau mungkin bisa juga HTMLCollection menjadi array asli
+        //* includes()  --> method untuk mengambil innerText (yg baru diketahui)
+        //* split() --> method untuk memisahkan isi array split(delimiter/pembatasnya) lalu me-return hasil yang sudah dipisahk
+        //* .dataset untuk mengambil custom attribute yang dibuat pada tag html saat menggunakan DOM .dataset.namaAttribute-nya;
+
+*/

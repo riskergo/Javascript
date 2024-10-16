@@ -16,11 +16,11 @@ const elementMhs = `
         </ul>
     </div>
 `;
-document.body.insertAdjacentHTML("beforeend",elementMhs);
+// document.body.insertAdjacentHTML("beforeend",elementMhs);
 
 
 
-//* html fragment array of object
+//* html fragment : array of object
 const students = [
     {
         nama:"kora",
@@ -47,9 +47,66 @@ const elementsMhs = `
             ).join("")}
     </div>
 `;
-
-document.body.insertAdjacentHTML("beforeend", elementsMhs);
-
-console.log(elementsMhs);
+// document.body.insertAdjacentHTML("beforeend", elementsMhs);
 
 
+//* html fragment: conditionals
+    //* menggunakan ternary
+const movie = {
+    title: "Batman The Dark Knight ",
+    director: "Christoper Nolan",
+    prequel: "Batman Begins",
+    sequel: "Batman The Dark Knight Rises"
+}
+
+const movieEl = `<div>
+    <ul>
+        <li>Movie Title : ${movie.title} directed by ${movie.director} </li>
+        ${movie.prequel && movie.sequel ? `<li>Prequel : ${movie.prequel}</li> <li>Sequel : ${movie.sequel}</li>` : ``}
+    </ul>
+</div>`
+// document.body.insertAdjacentHTML("beforeend", movieEl);
+
+//* HTML Fragment : nested
+const mahasiswaGG = {
+    nama: "kontoru",
+    semester: 5,
+    mataKuliah: [
+        "Metode Penelitian",
+        "Bahasa Mandarin",
+        "Psikologi Mister Irony",
+        "Bermain Yoyo",
+        "Menghina Fans Manchester United",
+        "Merayakan Kemenangan Indonesia Lolos Kualifikasi Piala Dunia 2026",
+        "Tetap Humble walaupun menang (tidak sombong)"
+    ]
+}
+
+
+
+const dataMHS = `<div>
+    <h3>Nama : ${mahasiswaGG.nama}</h3>
+    <h3>Semester : ${mahasiswaGG.semester}</h3>
+    <h3>Matakuliah : 
+        ${cetakMatkul(mahasiswaGG.mataKuliah)}
+    </h3>
+</div>`
+
+//* versi function
+ function cetakMatkul(objectM){
+    return `<ol>
+        ${objectM.map( (elementMatkul) => `<li>${elementMatkul}</li>` ).join("")}
+    </ol>`
+ }
+
+
+
+
+/* //* versi looping, 
+   ? <ol>
+    ?    ${mahasiswaGG.mataKuliah.map( matkul => `<li>${matkul}</li>`).join("")}
+   ? </ol> 
+ */
+document.body.insertAdjacentHTML("beforeend", dataMHS);
+
+// console.log(elementsMhs);

@@ -88,7 +88,7 @@ const dataMHS = `<div>
     <h3>Nama : ${mahasiswaGG.nama}</h3>
     <h3>Semester : ${mahasiswaGG.semester}</h3>
     <h3>Matakuliah : 
-        ${cetakMatkul(mahasiswaGG.mataKuliah)}
+        ${cetakMatkul2(mahasiswaGG)}
     </h3>
 </div>`
 
@@ -99,7 +99,12 @@ const dataMHS = `<div>
     </ol>`
  }
 
-
+//* versi function 2, penangkapan parameter yang berbeda tapi tidak efektif
+function cetakMatkul2(objectM){
+    return `<ol>
+        ${objectM.mataKuliah.map( elementMatkul => `<li>${elementMatkul}</li>`).join("")}
+    </ol>`
+}
 
 
 /* //* versi looping, 

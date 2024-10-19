@@ -7,14 +7,14 @@
 */
 
 //* contoh kasus
-const nama = "koree antonion";
-const umur = 33;
+// const nama = "koree antonion";
+// const umur = 33;
 
 //* common template literals 
     // const str = `nigg, my name is ${nama} and i'm ${umur}year-old nigga`;
     
 
-function coba(strings, ...args){        //* secara default, tagged template bisa menerima parameter/argument
+// function coba(strings, ...args){        //* secara default, tagged template bisa menerima parameter/argument
     // return `kasdo`  //* di konsol ini
     //* jikalau di-return parameternya, maka
     // return strings  //* menghasilkan array, prosesnya memecah beberapa string (dipisahkan oleh expression) lalu disimpan ke dalam array
@@ -39,12 +39,38 @@ function coba(strings, ...args){        //* secara default, tagged template bisa
     // return result;
 
     //* versi sangat gampangnya, menggunakan hof .reduce
-    return strings.reduce((result, str, index) => {
-       return `${result}${str}${args[index] || ""}`
-    }, "" );
-
-
-}
+    // return strings.reduce((result, str, index) => {
+    //    return `${result}${str}${args[index] || ""}`
+    // }, "" );
+// }
 //* turn into tagged template
-const gg = coba`nigg, my name is ${nama} and i'm ${umur} year-old nigga`;
-console.log(gg);
+// const gg = coba`nigg, my name is ${nama} and i'm ${umur} year-old nigga`;
+// console.log(gg);
+
+
+
+
+//* contoh implementasi sederhana
+//* mencari string hasil pencarian berdasarkan keyword tertentu
+    //* highlight
+
+const nama = "koree";
+const umur = 12;
+
+function highlight(strings, ...args){
+
+    //* reduce()    mempunyai dua parameter wajib yaitu: reduce(accumulator, currentValue, index(opsional) );
+    //* accumulator di sini sebagai hasil yang telah digabungkan dari currentValue-nya  atau bisa dianggap hasil gabungan yang awal mulanya kosong
+    //* dan currentValue di sini sebagai element-element yang berada di dalam array yang diulang 
+    //* lalu index adalah nomor index dalam array yang diulang
+            //* index di konteks ini berfungsi sebagai mengulang/looping agar expression ...args bisa ditambahkan juga
+    return strings.reduce( (result, string, index) => `${result}${string}<span class="highlight">${args[index] || ""}</span>`, "") 
+    //* string kosong setelah template literals berfungsi sebagai nilai awal, biasanya 0 tapi di sini kasusny adalah string bukan angka
+}
+
+//* membuat nama dan umur ada highlight-nya, karena keduanya adalah values 
+const str = highlight`guha, ${nama} dan berumur ${umur} thn`;
+
+console.log(str);
+
+document.body.insertAdjacentHTML("beforeend", str);

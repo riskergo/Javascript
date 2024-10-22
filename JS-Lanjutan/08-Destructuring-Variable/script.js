@@ -74,13 +74,14 @@
     const game = var2.Game;
     const developer = var2.Developer;
 
+    
     //* destructuring assigment
         //* nama variabelnya harus sama, kalau sebelumnya (array) bisa bebas
     const {Game, Developer} = var2;
         //* tidak boleh sembarangan seperti ini
     //* const {a, b} = var2     ini akan error
     //* jadi harus sama dengan properti-nya
-    console.log(Game, Developer);
+    // console.log(Game, Developer);
 
 
         //* assignment tanpa deklarasi object
@@ -96,11 +97,71 @@
         dreamphone2: "Iphone 15 Pro",
         dreamphone3: "Poco F6"
     }    
-    const {hp1: hpSaatIni, dreamphone1: InsyaAllahTahunDepan, dreamphone2: InsyaAllahTahunDepan2, dreamphone3: InsyaAllahTahunDepan3} = handphone;
-    console.log(`dreamphones : ${InsyaAllahTahunDepan} or ${InsyaAllahTahunDepan2} or ${InsyaAllahTahunDepan3}`);
+    // const {hp1: hpSaatIni, dreamphone1: InsyaAllahTahunDepan, dreamphone2: InsyaAllahTahunDepan2, dreamphone3: InsyaAllahTahunDepan3} = handphone;
+    // console.log(`dreamphones : ${InsyaAllahTahunDepan} or ${InsyaAllahTahunDepan2} or ${InsyaAllahTahunDepan3}`);
 
+
+    //* memberikan default value
+    const  hp = {
+        firstPhone: "Xiaomi Redmi Note 8",
+        dream1: "Iphone 16 Pro",
+        dream2: "Iphone 15 Pro",
+        dream3: "Poco F6",
+        //* jikalau sebelumnya property yang sudah di-set nilai default-nya ada lalu ditambahkan
+        dream4: "Iphone 14 Pro Max"
+        //* maka value yang diambil adalah ini, bukan nilai defaultnya
+    }
+    const {firstPhone, dream1, dream2, dream3 , dream4 = "Iphone 14 Pro" } = hp;
+    // console.log(firstPhone, dream1, dream2, dream3, dream4);
+
+
+    //* gabungan, default value dan memberikan nama baru untuk variabel sesuai keinginan
+    const blockchainNetworks = {
+        bc1: "Bitcoin Mainnet",
+        bc2: "Ethereum Mainnet",
+        bc3: "Arbitrum One Layer 2",
+        bc4: "Ton Network",
+    };
+
+    const {bc1: blockchain1, bc2: blockchain2, bc3: blockchain3, bc4: blockchain4, bc5: blockchain5 = "_Blockchain-Name" } = blockchainNetworks;
+    // console.log(blockchain1, blockchain2, blockchain3, blockchain4, blockchain5);
+    // console.log(bc5);    //* error karena property yang diambil dari object blockchainNetworks (bc5) sudah di-assign menjadi variabel dengan nama yang baru yaitu, blockchain5
+
+
+    //* bisa juga menggunakan rest parameter seperti di array, tetapi
+    const {bc1, ...value} = blockchainNetworks;
+    console.log(value); //* berbentuk object, bukan array
+        //* bisa digunakan ketika tidak tau jumlah pasti dari property yang di-assign
+
+
+    //* mengambil field pada object, setelah dikirim sebagai parameter pada sebuah function
+    const coin = {
+        one: "BTC",
+        two: "ETH",
+        three: "TON"
+    }
+
+    //* cara biasa
+        function getToken1(argCoin){
+            return argCoin.one
+        };
+
+        console.log(getToken1(coin));
+
+    //* dengan destructuring assigment
+        function getToken2( { two } ) {
+            return two;
+        };
+        
+        console.log(getToken2(coin));
+    //* versi lebih banyak return
+        function getTokens( {two, three}){
+            return `${two} and ${three}`;
+        };
+        console.log(getTokens(coin));
         /* 
             * kesimpulan:
             * gunakan kurung siku/kotak untuk destructuring array
             * gunakan kurung kurawal untuk destructuring object
         */
+

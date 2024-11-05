@@ -116,7 +116,7 @@ for ( const keyObj in objMhs ) {
 
 
 
-//* coba for..in pada array. Tidak ideal karena peformanya jadi lebih lambat, jadi gunakan for of
+//* coba for..in pada array. Tidak ideal karena peformanya jadi lebih lambat, jadi gunakan for of bersama destructuring variabel untuk index dan elementnya 
 const arr2 = ["kor", "ask", "kdo"];
 // for (const index in arr2){
 //     console.log(index);

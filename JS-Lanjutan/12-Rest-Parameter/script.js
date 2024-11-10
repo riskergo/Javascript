@@ -137,8 +137,7 @@ function filter2By(type, ...values){
 }
 console.log(filter2By("string", 1, 6, 2, 7, "krokotao", "bao", true, false, 9));
 
-function filter3By(tyoe, ...values){
-
+function filter3By(...values){
     //* coba menggunakan method filter
     return values.filter( element => typeof element === type);
 }

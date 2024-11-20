@@ -1,0 +1,23 @@
+[
+    {
+        "nama": "Koree Antonio",
+        "nrp": "931921",
+        "email": "KAOROK@mgao.com",
+        "jurusan": "Irony",
+        "idDosenWali": 1
+    },
+    {
+        "nama": "Rusdi Barber",
+        "nrp": "34199",
+        "email": "goaks@sdao.com",
+        "jurusan": "JMK48",
+        "idDosenWali": 2
+    },
+    {
+        "nama": "Fuad Entog",
+        "nrp": "36542",
+        "email": "kokontoaAG@apsld.com",
+        "jurusan": "duri-dumai",
+        "idDosenWali": 3
+    }
+]
